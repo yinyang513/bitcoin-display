@@ -15,8 +15,9 @@ class Home extends React.Component {
   }
 
   componentDidMount() {
+
     axios.get('http://localhost:5000').then(res => {
-      
+      // retrieve prices from backend
       const messari_eth = res.data['messari_response_eth']['data']['market_data']['price_usd']
       const messari_bit = res.data['messari_response_bit']['data']['market_data']['price_usd']
       const nomics_bit = Number(res.data['nomics'][0]['price'])
@@ -29,6 +30,7 @@ class Home extends React.Component {
       console.log(Math.min(this.state.messari_bit, this.state.nomics_bit))
       console.log(Math.min(this.state.messari_eth, this.state.nomics_eth))
 
+      // search for recommended prices 
       if (messari_bit < nomics_bit) {
         this.setState({bit_min: 'Messari'})
       }
@@ -45,7 +47,6 @@ class Home extends React.Component {
 
       console.log(this.state.bit_min)
       console.log(this.state.eth_min)
-      
 
     })
   }
@@ -64,7 +65,6 @@ class Home extends React.Component {
         <p>BTC: {this.state.bit_min}</p>
         <p>ETH: {this.state.eth_min}</p>
       </div>
-      
     )
   }
 }
