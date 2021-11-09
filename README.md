@@ -1,6 +1,4 @@
-# bitcoin-display
-
-Welcome to CryptoCurrency Display!
+# Welcome to CryptoCurrency Display!
 
 # Retrieve Nomics API Key
 1. retrieve Nomics API key from https://p.nomics.com/cryptocurrency-bitcoin-api
