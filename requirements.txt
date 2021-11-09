@@ -1,0 +1,4 @@
+coinbase
+flask
+flask_cors
+requests
