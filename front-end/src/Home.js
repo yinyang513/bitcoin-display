@@ -28,8 +28,6 @@ class Home extends React.Component {
       this.setState({nomics_eth: nomics_eth})
       console.log(Math.min(this.state.messari_bit, this.state.nomics_bit))
       console.log(Math.min(this.state.messari_eth, this.state.nomics_eth))
-      // const int_bit_min = Math.min(this.state.messari_bit, this.state.nomics_bit)
-      // const int_eth_min = Math.min(this.state.messari_eth, this.state.nomics_eth)
 
       if (messari_bit < nomics_bit) {
         this.setState({bit_min: 'Messari'})

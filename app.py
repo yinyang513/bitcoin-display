@@ -2,7 +2,7 @@ from flask import Flask
 import json
 import requests
 from flask_cors import CORS
-from config import nomics_api_key, messari_api_key
+from user_config import nomics_api_key, messari_api_key
 
 app = Flask(__name__)
 cors = CORS(app)
