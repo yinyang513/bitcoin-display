@@ -24,7 +24,4 @@ def main():
     stats['messari_response_eth'] = json.loads(messari_response_eth.text)
     stats['messari_response_bit'] = json.loads(messari_response_bit.text)
 
-
-    # print(response.text)
-    
     return stats
